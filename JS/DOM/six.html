@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Create and set up the head section
+const head = document.createElement("head");
+const title = document.createElement("title");
+title.appendChild(document.createTextNode("My Document"));
+head.appendChild(title);
+
+// Append the head section to the document
+document.head.replaceWith(head); // Replaces the existing head
+
+// Create and set up the body section
+const body = document.createElement("body");
+
+const header = document.createElement("h1");
+header.appendChild(document.createTextNode("Header"));
+const paragraph = document.createElement("p");
+paragraph.appendChild(document.createTextNode("Paragraph"));
+
+body.appendChild(header);
+body.appendChild(paragraph);
+
+// Append the body section to the document
+document.body.replaceWith(body); // Replaces the existing body
+
+    </script>
+    
+</body>
+</html>

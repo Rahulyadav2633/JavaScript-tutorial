@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Image from Object</title>
+</head>
+<body>
+
+    <!-- Image placeholder -->
+    <img id="photo" alt="Loading..." />
+
+    <script>
+        // Object with image data
+        const photoObject = {
+            id: 1,
+            name: 'Sample Image',
+            url: 'https://example.com/sample-image.jpg'
+        };
+
+        // Get the image element
+        const imgElement = document.getElementById('photo');
+
+        // Set the 'src' attribute to the image URL from the object
+        imgElement.src = photoObject.url;
+
+        // Optionally set the 'alt' attribute
+        imgElement.alt = photoObject.name;
+    </script>
+
+</body>
+</html>

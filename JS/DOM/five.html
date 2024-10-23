@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Step 1: Create the div element
+var newDiv = document.createElement('div');
+
+// Step 2: Set attributes or styles (optional)
+newDiv.id = 'myDiv';
+newDiv.className = 'myClass';
+newDiv.style.width = '200px';
+newDiv.style.height = '100px';
+newDiv.style.backgroundColor = 'lightblue';
+
+// Step 3: Add content (optional)
+newDiv.textContent = 'Hello, this is a new div!';
+
+// Step 4: Append the div to the body or another element
+document.body.appendChild(newDiv);
+
+// Alternatively, append it to a specific element by its ID
+// var parentElement = document.getElementById('parentElementId');
+// parentElement.appendChild(newDiv);
+
+    </script>
+</body>
+</html>

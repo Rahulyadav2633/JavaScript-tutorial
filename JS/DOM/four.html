@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background: #000; color: green;">
+    <ul class = "language">
+        <li>Javasript</li>
+    </ul>
+    
+</body>
+<script>
+    function addlanguage(lang){
+    const li = document.createElement( 'li')
+     li.innerHTML = `${lang}`
+     document.querySelector('.language').appendChild(li);
+        
+    }
+    addlanguage('python')
+    addlanguage('Java')
+
+    function addOptilanguage(lang){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector('.language').appendChild(li);
+    }
+    addOptilanguage('golang')
+
+// EDIT
+const secondlang = document.querySelector("li:nth-child(2)");
+console.log(secondlang);
+secondlang.innerHTML = 'Ruby on nails';
+const newlist = document.createElement('li');
+newlist.textContent = "Ruby on nails"
+secondlang.replaceWith(newlist)
+
+const firstlang = document.querySelector('li:nth-child(4)');
+firstlang.outerHTML = "<li> C </li>"
+
+const lastlang = document.querySelector('li:last-child')
+lastlang.remove();
+</script>
+</html>

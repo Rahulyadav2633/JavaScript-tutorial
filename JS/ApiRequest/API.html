@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API</title>
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto; /* Automatically adjusts the height while keeping the aspect ratio */
+            border-radius: 50%; /* Makes the image round */
+        }
+
+        .container {
+            padding: 0 16px;
+        }
+
+        .container h4 {
+            margin: 10px 0;
+        }
+
+        .container p {
+            color: grey;
+            font-size: 18px;
+        }
+    </style>
+  </head>
+  <body style="background-color: beige">
+    <a
+      style="color: black"
+      href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest"
+      >XML</a>
+
+      <div class="card">
+        <img src="product1.jpg" alt="Laptop">
+        <div class="container">
+          <h4>John Doe</h4>
+          <p>Architect & Engineer</p>
+        </div>
+      </div>
+  </body>
+  <script>
+    // Create a new XMLHttpRequest object
+    const requestUrl = "https://api.github.com/users/hiteshchoudhary";
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", requestUrl);
+    xhr.onreadystatechange = function () {
+      console.log(xhr.readyState);
+      if (xhr.readyState === 4) {
+        const data = JSON.parse(this.responseText);
+        console.log(typeof data);
+        console.log(data.followers);
+      }
+    };
+    xhr.send();
+    
+  </script>
+</html>
